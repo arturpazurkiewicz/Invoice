@@ -17,7 +17,7 @@ public class Main {
         Invoice invoice = invoiceBuilder.createNewInvoice(c1, Calendar.getInstance().getTime(),10);
         try {
             InvoiceDatabase invoiceDatabase = new InvoiceDatabase();
-            invoiceDatabase.addInvoice(invoice);
+            System.out.println(invoiceDatabase.getInvoiceById(6));
         } catch (SQLException e) {
             e.printStackTrace();
         }

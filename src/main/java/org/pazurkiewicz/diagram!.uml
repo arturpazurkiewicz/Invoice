@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="139.0" y="218.0">org.pazurkiewicz.Client</node>
+    <node x="335.0" y="76.0">org.pazurkiewicz.database.mysql.InvoiceElementDatabase</node>
+    <node x="192.5" y="0.0">org.pazurkiewicz.database.mysql.Database</node>
+    <node x="378.0" y="147.0">org.pazurkiewicz.TaxManager</node>
+    <node x="171.0" y="76.0">org.pazurkiewicz.database.mysql.ClientDatabase</node>
+    <node x="189.0" y="147.0">org.pazurkiewicz.InvoiceElement</node>
+    <node x="0.0" y="147.0">org.pazurkiewicz.InvoiceBuilder</node>
+    <node x="0.0" y="289.0">org.pazurkiewicz.Item</node>
+    <node x="388.0" y="218.0">org.pazurkiewicz.Main</node>
+    <node x="271.0" y="218.0">org.pazurkiewicz.User</node>
+    <node x="0.0" y="76.0">org.pazurkiewicz.database.mysql.InvoiceDatabase</node>
+    <node x="0.0" y="218.0">org.pazurkiewicz.Invoice</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceElementDatabase" target="org.pazurkiewicz.database.mysql.Database">
+      <point x="0.0" y="-13.0" />
+      <point x="436.0" y="51.0" />
+      <point x="276.66666666666663" y="51.0" />
+      <point x="33.66666666666663" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.ClientDatabase" target="org.pazurkiewicz.database.mysql.Database">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceDatabase" target="org.pazurkiewicz.database.mysql.Database">
+      <point x="0.0" y="-13.0" />
+      <point x="75.5" y="51.0" />
+      <point x="209.33333333333331" y="51.0" />
+      <point x="-33.666666666666686" y="13.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8999999999999997" x="501.0" y="279.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
