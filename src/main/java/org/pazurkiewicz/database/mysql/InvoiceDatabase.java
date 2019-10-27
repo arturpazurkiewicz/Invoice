@@ -1,17 +1,20 @@
-package org.pazurkiewicz;
+package org.pazurkiewicz.database.mysql;
+
+import org.pazurkiewicz.Invoice;
+import org.pazurkiewicz.InvoiceBuilder;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class InvoiceDatabase extends Database {
-    static InvoiceBuilder invoiceBuilder;
+    private static InvoiceBuilder invoiceBuilder;
 
-    InvoiceDatabase() {
+    public InvoiceDatabase() {
         super();
         invoiceBuilder = new InvoiceBuilder();
     }
 
-    Invoice getInvoiceById(int id) throws SQLException {
+    public Invoice getInvoiceById(int id) throws SQLException {
         ResultSet rs = statement.executeQuery("SELECT *\n" +
                 "FROM invoice\n" +
                 "INNER JOIN invoice_elements ie on invoice.invoice_id = ie.invoice_id\n" +

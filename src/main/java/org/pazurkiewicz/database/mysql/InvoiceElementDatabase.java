@@ -1,4 +1,8 @@
-package org.pazurkiewicz;
+package org.pazurkiewicz.database.mysql;
+
+import org.pazurkiewicz.InvoiceElement;
+import org.pazurkiewicz.Item;
+import org.pazurkiewicz.TaxManager;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

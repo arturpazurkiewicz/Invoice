@@ -1,4 +1,4 @@
-package org.pazurkiewicz;
+package org.pazurkiewicz.database.mysql;
 
 import java.sql.*;
 

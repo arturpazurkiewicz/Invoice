@@ -1,15 +1,17 @@
-package org.pazurkiewicz;
+package org.pazurkiewicz.database.mysql;
+
+import org.pazurkiewicz.Client;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class ClientDatabase extends Database {
-    ClientDatabase() {
+    public ClientDatabase() {
         super();
     }
 
-    void addClient(Client client) throws SQLException {
+    public void addClient(Client client) throws SQLException {
         preparedStatement = connection.prepareStatement("INSERT INTO client VALUES (id,?,?,?,?,?)");
         preparedStatement.setString(1, client.name);
         preparedStatement.setString(2, client.NIP);
@@ -19,7 +21,7 @@ public class ClientDatabase extends Database {
         preparedStatement.executeUpdate();
     }
 
-    Client getClientByID(int id) throws SQLException {
+    public Client getClientByID(int id) throws SQLException {
         ResultSet rs = statement.executeQuery("select * from client WHERE id =" + id);
         return resultToClient(rs);
     }
@@ -32,7 +34,7 @@ public class ClientDatabase extends Database {
         return clients;
     }
 
-    void deleteClientByID(int id) throws SQLException {
+    public void deleteClientByID(int id) throws SQLException {
         statement.executeUpdate("DELETE invoice,ie,c\n" +
                 "FROM invoice\n" +
                 "INNER JOIN invoice_elements ie on invoice.invoice_id = ie.invoice_id\n" +
