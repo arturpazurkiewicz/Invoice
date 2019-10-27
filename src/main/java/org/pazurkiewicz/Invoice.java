@@ -64,7 +64,7 @@ public class Invoice {
                     s.append("ZW");
             }
             s.append(" kwota ");
-            s.append(String.format ("%,.2f",element.taxCalculation()));
+            s.append(String.format ("%,.2f",TaxManager.taxCalculation(element.netCalculation(), element.getItem().getTaxType())));
             s.append(" Wartość z podatkiem ");
             s.append(String.format ("%,.2f",element.grossCalculation()));
             s.append("\n");
@@ -72,5 +72,45 @@ public class Invoice {
         s.append("\n    Do zapłaty ");
         s.append(String.format ("%,.2f",fullGross));
         return s.toString();
+    }
+
+    public String getClientNIP() {
+        return clientNIP;
+    }
+
+    public int getInvoiceId() {
+        return invoiceId;
+    }
+
+    public ArrayList<InvoiceElement> getElements() {
+        return elements;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public String getClientPostCode() {
+        return clientPostCode;
+    }
+
+    public String getClientStreetAndNumber() {
+        return clientStreetAndNumber;
+    }
+
+    public String getClientCity() {
+        return clientCity;
+    }
+
+    public Float getFullNet() {
+        return fullNet;
+    }
+
+    public Float getFullGross() {
+        return fullGross;
+    }
+
+    public Date getDate() {
+        return date;
     }
 }

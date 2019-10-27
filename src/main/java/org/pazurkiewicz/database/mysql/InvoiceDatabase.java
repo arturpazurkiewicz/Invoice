@@ -2,7 +2,9 @@ package org.pazurkiewicz.database.mysql;
 
 import org.pazurkiewicz.Invoice;
 import org.pazurkiewicz.InvoiceBuilder;
+import org.pazurkiewicz.InvoiceElement;
 
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -30,5 +32,22 @@ public class InvoiceDatabase extends Database {
         rs.beforeFirst();
         rs.next();
         return invoiceBuilder.createNewInvoice(ClientDatabase.resultToClient(rs), rs.getDate("date"), rs.getInt("invoice_id"));
+    }
+
+    public void addInvoice(Invoice invoice) throws SQLException{
+        preparedStatement = connection.prepareStatement("INSERT INTO invoice VALUES (invoice_id,?,?)");
+        preparedStatement.setInt(1,ClientDatabase.idClient(invoice.getClientNIP()));
+        preparedStatement.setDate(2, new Date(invoice.getDate().getTime()));
+        preparedStatement.executeUpdate();
+        int id = lastInvoiceId();
+        for (InvoiceElement element:
+             invoice.getElements()) {
+            InvoiceElementDatabase.addInvoiceElement(element,id);
+        }
+    }
+    private static int lastInvoiceId() throws SQLException{
+        ResultSet rs = statement.executeQuery("SELECT MAX(invoice_id) FROM invoice");
+        rs.next();
+        return rs.getInt(1);
     }
 }

@@ -46,6 +46,9 @@ public class ClientDatabase extends Database {
         return new Client(rs.getInt("id"), rs.getString("name"), rs.getString("NIP"), rs.getString("city"), rs.getString("streetAndNumber"), rs.getString("postcode"));
 
     }
-
-
+    public static int idClient(String NIP) throws SQLException{
+        ResultSet rs = statement.executeQuery("SELECT * FROM client WHERE NIP ='"+NIP+"'");
+        rs.next();
+        return resultToClient(rs).id;
+    }
 }

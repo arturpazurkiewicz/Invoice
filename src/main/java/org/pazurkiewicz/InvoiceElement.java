@@ -10,21 +10,8 @@ public class InvoiceElement {
 
     }
 
-    float taxCalculation(){
-        float net = netCalculation();
-        switch (item.getTaxType()){
-            case o23:
-                return net*0.23f;
-            case o8:
-                return net*0.08f;
-            case o5:
-                return net*0.05f;
-            default:
-                return 0f;
-        }
-    }
-    float grossCalculation(){
-        return netCalculation()+taxCalculation();
+    float grossCalculation() {
+        return netCalculation() + TaxManager.taxCalculation(netCalculation(), item.getTaxType());
     }
 
     public Item getItem() {
@@ -35,7 +22,7 @@ public class InvoiceElement {
         return quantity;
     }
 
-    float netCalculation(){
-        return quantity*item.getNetAmount();
+    float netCalculation() {
+        return quantity * item.getNetAmount();
     }
 }
