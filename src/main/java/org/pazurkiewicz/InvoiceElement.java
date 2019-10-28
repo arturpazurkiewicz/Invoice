@@ -1,8 +1,8 @@
 package org.pazurkiewicz;
 
 public class InvoiceElement {
-    private Item item;
-    private float quantity;
+    private final Item item;
+    private final float quantity;
 
     public InvoiceElement(Item item, float quantity) {
         this.item = item;

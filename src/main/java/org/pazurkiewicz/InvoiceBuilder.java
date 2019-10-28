@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class InvoiceBuilder {
-    private ArrayList <InvoiceElement> elements;
+    private final ArrayList <InvoiceElement> elements;
     public InvoiceBuilder(){
         elements = new ArrayList<>();
     }

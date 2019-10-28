@@ -22,11 +22,19 @@ public class ClientDatabase extends Database {
     }
 
     public Client getClientByID(int id) throws SQLException {
-        ResultSet rs = statement.executeQuery("select * from client WHERE id =" + id);
+        ResultSet rs = statement.executeQuery("select * from client WHERE id ='" + id+"'");
+        rs.next();
         return resultToClient(rs);
     }
 
-    ArrayList<Client> getAllClients() throws SQLException {
+    public Client getClientByName(String name) throws SQLException {
+        ResultSet rs = statement.executeQuery("select * from client WHERE name ='" + name+"'");
+        rs.next();
+        return resultToClient(rs);
+    }
+
+
+    public ArrayList<Client> getAllClients() throws SQLException {
         ArrayList<Client> clients = new ArrayList<>();
         ResultSet rs = statement.executeQuery("select * from client");
         while (rs.next())
@@ -35,11 +43,19 @@ public class ClientDatabase extends Database {
     }
 
     public void deleteClientByID(int id) throws SQLException {
-        statement.executeUpdate("DELETE invoice,ie,c\n" +
-                "FROM invoice\n" +
-                "INNER JOIN invoice_elements ie on invoice.invoice_id = ie.invoice_id\n" +
-                "INNER JOIN client c on invoice.client_id = c.id\n" +
-                "WHERE client_id =" + id);
+        statement.executeUpdate("DELETE client,ie,i\n" +
+                "FROM client\n" +
+                "LEFT JOIN invoice i on client.id = i.client_id\n" +
+                "LEFT JOIN invoice_elements ie on i.invoice_id = ie.invoice_id\n" +
+                "WHERE client.id='" + id+"'");
+    }
+
+    public void deleteClientByName(String name) throws SQLException {
+        statement.executeUpdate("DELETE client,ie,i\n" +
+                "FROM client\n" +
+                "LEFT JOIN invoice i on client.id = i.client_id\n" +
+                "LEFT JOIN invoice_elements ie on i.invoice_id = ie.invoice_id\n" +
+                "WHERE name ='" + name+"'");
     }
 
     static Client resultToClient(ResultSet rs) throws SQLException {
@@ -51,4 +67,5 @@ public class ClientDatabase extends Database {
         rs.next();
         return resultToClient(rs).id;
     }
+
 }

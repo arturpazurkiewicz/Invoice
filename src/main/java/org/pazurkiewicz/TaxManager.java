@@ -12,12 +12,16 @@ public abstract class TaxManager {
     public static taxType stringToTax(String s) {
         switch (s) {
             case "o23":
+            case "23%":
                 return taxType.o23;
             case "o8":
+            case "8%":
                 return taxType.o8;
             case "o5":
+            case "5%":
                 return taxType.o5;
             case "o0":
+            case "0%":
                 return taxType.o0;
             default:
                 return taxType.zw;

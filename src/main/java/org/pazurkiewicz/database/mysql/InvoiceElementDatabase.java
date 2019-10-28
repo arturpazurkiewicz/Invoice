@@ -11,14 +11,14 @@ public class InvoiceElementDatabase extends Database {
     InvoiceElement getInvoiceElement(int invoice_id, String item) throws SQLException {
         ResultSet rs = statement.executeQuery("SELECT *\n" +
                 "FROM invoice_elements\n" +
-                "WHERE invoice_id = " + invoice_id + "\n" +
+                "WHERE invoice_id = '" + invoice_id + "'\n" +
                 "AND item = '" + item + "'");
         return resultToInvoiceElement(rs);
     }
-    public void deleteInvoiceElement(int invoice_id, String item) throws SQLException{
+    public static void deleteInvoiceElement(int invoice_id, String item) throws SQLException{
         statement.executeUpdate("DELETE invoice_elements\n" +
                 "FROM invoice_elements\n" +
-                "WHERE invoice_id = " + invoice_id + "\n" +
+                "WHERE invoice_id = '" + invoice_id + "'\n" +
                 "AND item = '" + item + "'");
     }
 

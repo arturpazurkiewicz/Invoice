@@ -1,9 +1,9 @@
 package org.pazurkiewicz;
 
 class User {
-    static String name = "Dzikie Węże";
-    static String NIP = "1234567890";
-    static String city = "Wrocław";
-    static String streetAndNumber = "ul.Kolorowa 32/4";
-    static String postcode = "56-086";
+    static final String name = "Dzikie Węże";
+    static final String NIP = "1234567890";
+    static final String city = "Wrocław";
+    static final String streetAndNumber = "ul.Kolorowa 32/4";
+    static final String postcode = "56-086";
 }
