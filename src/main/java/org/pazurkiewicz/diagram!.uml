@@ -3,39 +3,205 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="139.0" y="218.0">org.pazurkiewicz.Client</node>
-    <node x="335.0" y="76.0">org.pazurkiewicz.database.mysql.InvoiceElementDatabase</node>
-    <node x="192.5" y="0.0">org.pazurkiewicz.database.mysql.Database</node>
-    <node x="378.0" y="147.0">org.pazurkiewicz.TaxManager</node>
-    <node x="171.0" y="76.0">org.pazurkiewicz.database.mysql.ClientDatabase</node>
-    <node x="189.0" y="147.0">org.pazurkiewicz.InvoiceElement</node>
-    <node x="0.0" y="147.0">org.pazurkiewicz.InvoiceBuilder</node>
-    <node x="0.0" y="289.0">org.pazurkiewicz.Item</node>
-    <node x="388.0" y="218.0">org.pazurkiewicz.Main</node>
-    <node x="271.0" y="218.0">org.pazurkiewicz.User</node>
-    <node x="0.0" y="76.0">org.pazurkiewicz.database.mysql.InvoiceDatabase</node>
-    <node x="0.0" y="218.0">org.pazurkiewicz.Invoice</node>
+    <node x="136.37283834586464" y="222.0">org.pazurkiewicz.Client</node>
+    <node x="529.0624373433584" y="408.0">org.pazurkiewicz.database.mysql.InvoiceElementDatabase</node>
+    <node x="462.5624373433584" y="222.0">org.pazurkiewicz.database.mysql.Database</node>
+    <node x="29.735056390977434" y="0.0">org.pazurkiewicz.TaxManager</node>
+    <node x="334.62283834586464" y="116.0">org.pazurkiewicz.InvoiceElement</node>
+    <node x="341.87791353383454" y="0.0">org.pazurkiewicz.Item</node>
+    <node x="170.00291353383454" y="408.0">org.pazurkiewicz.InvoiceBuilder</node>
+    <node x="334.00291353383454" y="408.0">org.pazurkiewicz.database.mysql.ClientDatabase</node>
+    <node x="93.57998120300749" y="534.0">org.pazurkiewicz.Main</node>
+    <node x="242.62283834586464" y="116.0">org.pazurkiewicz.User</node>
+    <node x="436.9282581453633" y="534.0">org.pazurkiewicz.database.mysql.InvoiceDatabase</node>
+    <node x="243.37283834586464" y="222.0">org.pazurkiewicz.Invoice</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="org.pazurkiewicz.database.mysql.InvoiceElementDatabase" target="org.pazurkiewicz.database.mysql.Database">
-      <point x="0.0" y="-13.0" />
-      <point x="436.0" y="51.0" />
-      <point x="276.66666666666663" y="51.0" />
-      <point x="33.66666666666663" y="13.0" />
+    <edge source="org.pazurkiewicz.Main" target="org.pazurkiewicz.Invoice">
+      <point x="4.5" y="-13.0" />
+      <point x="134.0799812030075" y="484.0" />
+      <point x="159.50291353383454" y="484.0" />
+      <point x="159.50291353383454" y="338.0" />
+      <point x="255.12283834586464" y="338.0" />
+      <point x="-35.25" y="13.0" />
     </edge>
-    <edge source="org.pazurkiewicz.database.mysql.ClientDatabase" target="org.pazurkiewicz.database.mysql.Database">
-      <point x="0.0" y="-13.0" />
+    <edge source="org.pazurkiewicz.Main" target="org.pazurkiewicz.Item">
+      <point x="-22.5" y="-13.0" />
+      <point x="107.07998120300749" y="504.0" />
+      <point x="46.95076754385968" y="504.0" />
+      <point x="46.95076754385968" y="86.0" />
+      <point x="349.07791353383453" y="86.0" />
+      <point x="-28.80000000000001" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.Main" target="org.pazurkiewicz.Client">
+      <point x="-13.5" y="-13.0" />
+      <point x="116.07998120300749" y="318.0" />
+      <point x="145.07283834586462" y="318.0" />
+      <point x="-34.80000000000001" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceDatabase" target="org.pazurkiewicz.InvoiceBuilder">
+      <point x="-47.1875" y="-13.0" />
+      <point x="465.2407581453633" y="494.0" />
+      <point x="296.00291353383454" y="494.0" />
+      <point x="54.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceDatabase" target="org.pazurkiewicz.InvoiceElement">
+      <point x="66.0625" y="-13.0" />
+      <point x="578.4907581453633" y="514.0" />
+      <point x="757.8928571428571" y="514.0" />
+      <point x="757.8928571428571" y="182.0" />
+      <point x="469.62283834586464" y="182.0" />
+      <point x="63.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.InvoiceBuilder" target="org.pazurkiewicz.Item">
+      <point x="-61.71428571428572" y="-13.0" />
+      <point x="180.28862781954882" y="308.0" />
+      <point x="125.87283834586464" y="308.0" />
+      <point x="125.87283834586464" y="96.0" />
+      <point x="363.47791353383457" y="96.0" />
+      <point x="-14.399999999999977" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceDatabase" target="org.pazurkiewicz.Invoice">
+      <point x="-9.4375" y="-13.0" />
+      <point x="502.9907581453633" y="474.0" />
+      <point x="488.50291353383454" y="474.0" />
+      <point x="488.50291353383454" y="268.0" />
+      <point x="325.62283834586464" y="268.0" />
+      <point x="35.25" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.InvoiceElement" target="org.pazurkiewicz.TaxManager">
+      <point x="-48.0" y="-13.0" />
+      <point x="358.62283834586464" y="66.0" />
+      <point x="102.23505639097743" y="66.0" />
+      <point x="14.5" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceDatabase" target="org.pazurkiewicz.database.mysql.ClientDatabase">
+      <point x="-28.3125" y="-13.0" />
+      <point x="484.1157581453633" y="484.0" />
+      <point x="442.00291353383454" y="484.0" />
+      <point x="36.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.InvoiceElement" target="org.pazurkiewicz.Item">
+      <point x="48.0" y="-13.0" />
+      <point x="454.62283834586464" y="86.0" />
+      <point x="392.2779135338345" y="86.0" />
+      <point x="14.399999999999977" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.InvoiceBuilder" target="org.pazurkiewicz.Invoice">
+      <point x="-20.571428571428555" y="-13.0" />
+      <point x="221.431484962406" y="348.0" />
+      <point x="278.62283834586464" y="348.0" />
+      <point x="-11.75" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.Invoice" target="org.pazurkiewicz.InvoiceElement">
+      <point x="35.25" y="-13.0" />
+      <point x="325.62283834586464" y="172.0" />
+      <point x="361.62283834586464" y="172.0" />
+      <point x="-45.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.InvoiceBuilder" target="org.pazurkiewicz.Client">
+      <point x="-41.14285714285711" y="-13.0" />
+      <point x="200.86005639097743" y="298.0" />
+      <point x="179.87283834586464" y="298.0" />
       <point x="0.0" y="13.0" />
     </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceElementDatabase" target="org.pazurkiewicz.TaxManager">
+      <point x="50.5" y="-13.0" />
+      <point x="680.5624373433584" y="388.0" />
+      <point x="670.1782581453633" y="388.0" />
+      <point x="670.1782581453633" y="56.0" />
+      <point x="131.23505639097743" y="56.0" />
+      <point x="43.5" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceDatabase" target="org.pazurkiewicz.database.mysql.InvoiceElementDatabase">
+      <point x="47.1875" y="-13.0" />
+      <point x="559.6157581453633" y="504.0" />
+      <point x="630.0624373433584" y="504.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.Invoice" target="org.pazurkiewicz.TaxManager">
+      <point x="-35.25" y="-13.0" />
+      <point x="255.12283834586464" y="202.0" />
+      <point x="101.97998120300753" y="202.0" />
+      <point x="101.97998120300753" y="76.0" />
+      <point x="73.23505639097743" y="76.0" />
+      <point x="-14.5" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.InvoiceBuilder" target="org.pazurkiewicz.InvoiceElement">
+      <point x="61.71428571428572" y="-13.0" />
+      <point x="303.71719924812027" y="388.0" />
+      <point x="391.96992481203006" y="388.0" />
+      <point x="391.96992481203006" y="202.0" />
+      <point x="415.62283834586464" y="202.0" />
+      <point x="9.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.Main" target="org.pazurkiewicz.TaxManager">
+      <point x="-31.5" y="-13.0" />
+      <point x="98.07998120300749" y="514.0" />
+      <point x="0.0" y="514.0" />
+      <point x="0.0" y="76.0" />
+      <point x="44.235056390977434" y="76.0" />
+      <point x="-43.5" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceElementDatabase" target="org.pazurkiewicz.database.mysql.Database">
+      <point x="-84.16666666666663" y="-13.0" />
+      <point x="545.8957706766918" y="388.0" />
+      <point x="538.3124373433584" y="388.0" />
+      <point x="25.25" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.Main" target="org.pazurkiewicz.database.mysql.ClientDatabase">
+      <point x="31.5" y="-13.0" />
+      <point x="161.0799812030075" y="514.0" />
+      <point x="370.00291353383454" y="514.0" />
+      <point x="-36.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.ClientDatabase" target="org.pazurkiewicz.database.mysql.Database">
+      <point x="54.0" y="-13.0" />
+      <point x="460.00291353383454" y="388.0" />
+      <point x="487.8124373433584" y="388.0" />
+      <point x="-25.25" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceElementDatabase" target="org.pazurkiewicz.InvoiceElement">
+      <point x="16.83333333333337" y="-13.0" />
+      <point x="645.9282581453633" y="192.0" />
+      <point x="451.62283834586464" y="192.0" />
+      <point x="45.0" y="13.0" />
+    </edge>
     <edge source="org.pazurkiewicz.database.mysql.InvoiceDatabase" target="org.pazurkiewicz.database.mysql.Database">
-      <point x="0.0" y="-13.0" />
-      <point x="75.5" y="51.0" />
-      <point x="209.33333333333331" y="51.0" />
-      <point x="-33.666666666666686" y="13.0" />
+      <point x="28.3125" y="-13.0" />
+      <point x="540.7407581453633" y="454.0" />
+      <point x="518.5624373433584" y="454.0" />
+      <point x="518.5624373433584" y="388.0" />
+      <point x="521.479104010025" y="388.0" />
+      <point x="8.416666666666629" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.ClientDatabase" target="org.pazurkiewicz.Client">
+      <point x="-54.0" y="-13.0" />
+      <point x="352.00291353383454" y="288.0" />
+      <point x="197.2728383458646" y="288.0" />
+      <point x="17.399999999999977" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.Invoice" target="org.pazurkiewicz.User">
+      <point x="-11.75" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.Main" target="org.pazurkiewicz.InvoiceBuilder">
+      <point x="13.5" y="-13.0" />
+      <point x="143.0799812030075" y="494.0" />
+      <point x="188.00291353383454" y="494.0" />
+      <point x="-54.0" y="13.0" />
+    </edge>
+    <edge source="org.pazurkiewicz.database.mysql.InvoiceElementDatabase" target="org.pazurkiewicz.Item">
+      <point x="84.16666666666663" y="-13.0" />
+      <point x="714.229104010025" y="388.0" />
+      <point x="719.0102913533833" y="388.0" />
+      <point x="719.0102913533833" y="46.0" />
+      <point x="406.67791353383456" y="46.0" />
+      <point x="28.80000000000001" y="13.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.8999999999999997" x="501.0" y="279.0" />
+  <settings layout="Hierarchic Group" zoom="0.7999999999999996" x="444.8571428571431" y="173.7460317460317" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>

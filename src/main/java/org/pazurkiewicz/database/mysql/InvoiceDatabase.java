@@ -50,4 +50,11 @@ public class InvoiceDatabase extends Database {
         rs.next();
         return rs.getInt(1);
     }
+
+    public void deleteInvoice(int invoiceId) throws SQLException{
+        statement.executeUpdate("DELETE invoice,ie\n" +
+                "FROM invoice\n" +
+                "INNER JOIN invoice_elements ie on invoice.invoice_id = ie.invoice_id\n" +
+                "WHERE ie.invoice_id ="+invoiceId);
+    }
 }
