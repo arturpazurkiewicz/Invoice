@@ -31,15 +31,15 @@ public class TaxManager {
     public static String taxToString(taxType tax) {
         switch (tax) {
             case o23:
-                return "o23";
+                return "23%";
             case o8:
-                return "o8";
+                return "8%";
             case o5:
-                return "o5";
+                return "5%";
             case o0:
-                return "o0";
+                return "0%";
             case zw:
-                return "zw";
+                return "ZW";
             default:
                 return "000";
         }

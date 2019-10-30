@@ -8,7 +8,7 @@ import static org.pazurkiewicz.TaxManager.taxCalculation;
 public class TaxManagerTest {
     @Test
     public void shouldChangeTaxToString(){
-        Assert.assertEquals("o23",TaxManager.taxToString(TaxManager.taxType.o23));
+        Assert.assertEquals("23%",TaxManager.taxToString(TaxManager.taxType.o23));
     }
     @Test
     public void shouldChangeStringToTax(){

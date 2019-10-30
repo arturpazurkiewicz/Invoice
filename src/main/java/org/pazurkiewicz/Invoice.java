@@ -46,33 +46,20 @@ public class Invoice {
                 elements) {
             s.append(element.getItem().getName());
             s.append(" Ilość ");
-            s.append(element.getQuantity());
+            s.append(String.format("%,.2f", element.getQuantity()));
             s.append(" netto ");
             s.append(String.format("%,.2f", element.getItem().getNetAmount()));
             s.append(" stawka ");
-            switch (element.getItem().getTaxType()) {
-                case o23:
-                    s.append("23%");
-                    break;
-                case o8:
-                    s.append("8%");
-                    break;
-                case o5:
-                    s.append("5%");
-                    break;
-                case o0:
-                    s.append("0%");
-                    break;
-                case zw:
-                    s.append("ZW");
-            }
+            s.append(TaxManager.taxToString(element.getItem().getTaxType()));
             s.append(" kwota ");
             s.append(String.format("%,.2f", TaxManager.taxCalculation(element.netCalculation(), element.getItem().getTaxType())));
             s.append(" Wartość z podatkiem ");
             s.append(String.format("%,.2f", element.grossCalculation()));
             s.append("\n");
         }
-        s.append("\n    Do zapłaty ");
+        s.append("\n    Do zapłaty      netto: ");
+        s.append(String.format("%,.2f", fullNet));
+        s.append("  brutto: ");
         s.append(String.format("%,.2f", fullGross));
         return s.toString();
     }
