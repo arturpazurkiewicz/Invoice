@@ -164,7 +164,7 @@ class MainSwing {
                     invoices) {
                 invoiceComboBox.addItem(String.valueOf(invoice));
             }
-            if (invoices.size() == 0)
+            if (invoices.isEmpty())
                 invoiceComboBox.addItem("Brak faktur");
         } catch (SQLException e) {
             e.printStackTrace();

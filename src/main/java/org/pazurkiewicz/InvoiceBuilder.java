@@ -9,9 +9,6 @@ public class InvoiceBuilder {
         elements = new ArrayList<>();
     }
 
-    void addElement(Item item,float quantity){
-        elements.add(new InvoiceElement(item,quantity));
-    }
     public void addElement(InvoiceElement invoiceElement){
         elements.add(invoiceElement);
     }

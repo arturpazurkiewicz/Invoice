@@ -1,6 +1,6 @@
 package org.pazurkiewicz;
 
-public abstract class TaxManager {
+public class TaxManager {
     public enum taxType {
         o23,
         o8,
@@ -48,11 +48,11 @@ public abstract class TaxManager {
     public static float taxCalculation(float net, taxType tax) {
         switch (tax) {
             case o23:
-                return net * 0.23f;
+                return Math.round(net * 23f)/100f;
             case o8:
-                return net * 0.08f;
+                return Math.round(net * 8f)/100f;
             case o5:
-                return net * 0.05f;
+                return Math.round(net * 5f)/100f;
             default:
                 return 0f;
         }

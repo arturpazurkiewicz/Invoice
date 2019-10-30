@@ -12,9 +12,10 @@ public class Invoice {
     private final String clientStreetAndNumber;
     private final String clientCity;
     private final Float fullGross;
+    private final Float fullNet;
     private final Date date;
 
-    public Invoice(final int invoiceId, final ArrayList<InvoiceElement> elements, String clientName,
+    Invoice(final int invoiceId, final ArrayList<InvoiceElement> elements, String clientName,
                    String clientNIP, String clientPostCode, String clientStreetAndNumber,
                    String clientCity, float fullNet, float fullGross, Date date) {
         this.invoiceId = invoiceId;
@@ -24,7 +25,7 @@ public class Invoice {
         this.clientPostCode = clientPostCode;
         this.clientStreetAndNumber = clientStreetAndNumber;
         this.clientCity = clientCity;
-        Float fullNet1 = fullNet;
+        this.fullNet = fullNet;
         this.fullGross = fullGross;
         this.date = date;
     }
@@ -82,6 +83,14 @@ public class Invoice {
 
     public ArrayList<InvoiceElement> getElements() {
         return elements;
+    }
+
+    public Float getFullGross() {
+        return fullGross;
+    }
+
+    public Float getFullNet() {
+        return fullNet;
     }
 
     public Date getDate() {

@@ -2,7 +2,7 @@ package org.pazurkiewicz.database.mysql;
 
 import java.sql.*;
 
-abstract class Database {
+class Database {
     static Connection connection;
     static Statement statement;
     static PreparedStatement preparedStatement;
